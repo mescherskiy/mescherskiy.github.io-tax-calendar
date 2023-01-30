@@ -9,7 +9,7 @@ const getOrCreateTooltip = (chart) => {
         tooltipEl.style.opacity = 1;
         tooltipEl.style.pointerEvents = 'none';
         tooltipEl.style.position = 'absolute';
-        tooltipEl.style.transform = 'translate(-50%, 0)';
+        //tooltipEl.style.transform = 'translate(-50%, 0)';
         tooltipEl.style.transition = 'all .1s ease';
 
         const table = document.createElement('table');
@@ -28,8 +28,8 @@ export const externalTooltipHandler = (context) => {
     let tooltipEl = null;
     if (tooltip.dataPoints[0].raw == undefined || tooltip.body[0].lines.length == 0) {
         return;
-    } 
-    
+    }
+
     tooltipEl = getOrCreateTooltip(chart);
 
     if (tooltip.opacity === 0) {
@@ -92,7 +92,7 @@ export const externalTooltipHandler = (context) => {
             tableBody.appendChild(tr);
         });
 
-        
+
         const tableFooter = document.createElement('tfoot');
 
         footerLines.forEach(footer => {
@@ -119,10 +119,27 @@ export const externalTooltipHandler = (context) => {
         tableRoot.appendChild(tableFooter);
     }
 
-    const { offsetLeft: positionX, offsetTop: positionY } = chart.canvas;
+    const { offsetLeft: positionX, offsetTop: positionY, offsetWidth: chartWidth } = chart.canvas;
+    console.log(positionY, "y");
+    console.log(positionX, "x");
+    console.log(chartWidth, "width");
+    console.log(tooltipEl);
+
+    positionX > tooltipEl.offsetWidth/2 ?
+        tooltipEl.style.transform = 'translate(-50%, 0)' :
+        tooltipEl.style.transform = 'translate(0, 0)';
+
+    
+        
 
     tooltipEl.style.opacity = 1;
-    tooltipEl.style.left = positionX + tooltip.caretX + 'px';
+    if (positionX > document.body.offsetWidth/1.5) {
+        tooltipEl.style.transform = 'translate(15%, 0)';
+        tooltipEl.style.left = positionX - tooltipEl.offsetWidth + tooltip.caretX + 'px';
+    } else {
+        tooltipEl.style.left = positionX + tooltip.caretX + 'px';
+    }
+    
     tooltipEl.style.top = positionY + tooltip.caretY + 'px';
     tooltipEl.style.font = tooltip.options.bodyFont.string;
     tooltipEl.style.padding = tooltip.options.padding + 'px ' + tooltip.options.padding + 'px';
