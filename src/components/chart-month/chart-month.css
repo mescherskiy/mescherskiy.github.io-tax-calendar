@@ -1,0 +1,11 @@
+.month {
+    /* border-inline: 1px solid rgb(159, 159, 159); */
+    width: calc(100% / 3);
+    height: 80%;
+}
+
+.month p {
+    text-align: center;
+    margin: 0;
+    padding-top: .5rem;
+}

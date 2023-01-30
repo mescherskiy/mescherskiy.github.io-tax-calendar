@@ -1,0 +1,26 @@
+.quarter-title {
+    text-align: center;
+    padding: .3em 0;
+    
+}
+
+.chart-quarter {
+    height: 80%;
+}
+
+.quarter {
+    width: 25%;
+    height: 100%;
+}
+
+.quarter:not(:first-of-type) {
+    border-left: 1px solid #dee2e6;
+}
+
+.chart-quarter .month:not(:first-of-type) {
+    border-left: 1px solid #dee2e6;
+}
+
+/* .chart-quarter:nth-of-type(2) {
+    bor
+} */

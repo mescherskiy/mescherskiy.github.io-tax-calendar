@@ -1,0 +1,22 @@
+.title {
+    text-align: center;
+    padding: 3em;
+    
+}
+
+.title h2 {
+    font-size: 2rem;
+}
+
+.title h3 {
+    font-size: 1.5rem;
+    color: rgb(58, 58, 58);
+    line-height: 2;
+}
+
+.title h3 span {
+    padding: 0.1em 0.3em;
+    background-color: rgba(166, 217, 236, 50%);
+    border-radius: 8px;
+}
+
