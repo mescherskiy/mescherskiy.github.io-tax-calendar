@@ -1,0 +1,14 @@
+.tab-content {
+    height: 60%;
+}
+
+.tab-pane {
+    height: 100%;
+}
+
+.tab-pane select {
+    width: auto;
+    top: -40px;
+    right: 0;
+    background-color: rgb(13 110 253 / 25%);
+}
