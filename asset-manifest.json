@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/mescherskiy.github.io-tax-calendar/static/css/main.3bad3d53.css",
-    "main.js": "/mescherskiy.github.io-tax-calendar/static/js/main.08dae696.js",
-    "index.html": "/mescherskiy.github.io-tax-calendar/index.html",
-    "main.3bad3d53.css.map": "/mescherskiy.github.io-tax-calendar/static/css/main.3bad3d53.css.map",
-    "main.08dae696.js.map": "/mescherskiy.github.io-tax-calendar/static/js/main.08dae696.js.map"
+    "main.css": "/static/css/main.3bad3d53.css",
+    "main.js": "/static/js/main.08dae696.js",
+    "index.html": "/index.html",
+    "main.3bad3d53.css.map": "/static/css/main.3bad3d53.css.map",
+    "main.08dae696.js.map": "/static/js/main.08dae696.js.map"
   },
   "entrypoints": [
     "static/css/main.3bad3d53.css",
